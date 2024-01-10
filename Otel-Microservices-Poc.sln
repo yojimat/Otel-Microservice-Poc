@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Otel-Microservices-Poc", "Otel-Microservices-Poc\Otel-Microservices-Poc.csproj", "{F65D942A-CBB1-4FBC-8B41-27113BAC57DA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{577B9E07-C9B4-45DC-A8A1-DEFD8522D3B6} = {577B9E07-C9B4-45DC-A8A1-DEFD8522D3B6}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{978487DF-54B7-47BF-9738-A7470E46DB79}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yaml = docker-compose.yaml
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice-1", "Microservice-1\Microservice-1.csproj", "{5DC2DD97-F9BA-44FB-B655-92DBB7E8F79C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{577B9E07-C9B4-45DC-A8A1-DEFD8522D3B6} = {577B9E07-C9B4-45DC-A8A1-DEFD8522D3B6}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice-2", "Microservice-2\Microservice-2.csproj", "{6969A075-DA2E-40A9-8244-821DCB23B2B7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utils", "Utils\Utils.csproj", "{577B9E07-C9B4-45DC-A8A1-DEFD8522D3B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".docker", ".docker", "{9A609704-1924-4EA5-95DC-6FA686715388}"
+	ProjectSection(SolutionItems) = preProject
+		otel-collector-config.yaml = otel-collector-config.yaml
+		prometheus.yaml = prometheus.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F65D942A-CBB1-4FBC-8B41-27113BAC57DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F65D942A-CBB1-4FBC-8B41-27113BAC57DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F65D942A-CBB1-4FBC-8B41-27113BAC57DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F65D942A-CBB1-4FBC-8B41-27113BAC57DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DC2DD97-F9BA-44FB-B655-92DBB7E8F79C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DC2DD97-F9BA-44FB-B655-92DBB7E8F79C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DC2DD97-F9BA-44FB-B655-92DBB7E8F79C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DC2DD97-F9BA-44FB-B655-92DBB7E8F79C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6969A075-DA2E-40A9-8244-821DCB23B2B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6969A075-DA2E-40A9-8244-821DCB23B2B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6969A075-DA2E-40A9-8244-821DCB23B2B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6969A075-DA2E-40A9-8244-821DCB23B2B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{577B9E07-C9B4-45DC-A8A1-DEFD8522D3B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{577B9E07-C9B4-45DC-A8A1-DEFD8522D3B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{577B9E07-C9B4-45DC-A8A1-DEFD8522D3B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{577B9E07-C9B4-45DC-A8A1-DEFD8522D3B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9A609704-1924-4EA5-95DC-6FA686715388} = {978487DF-54B7-47BF-9738-A7470E46DB79}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {051A18C3-7EBB-4114-81B4-48F6B8026F64}
+	EndGlobalSection
+EndGlobal

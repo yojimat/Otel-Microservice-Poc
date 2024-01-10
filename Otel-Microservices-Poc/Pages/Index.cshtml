@@ -1,0 +1,11 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Microservice 0</h1>
+    <p>This is supposed to start the chain of call to microservice 1 and 2. Verify message bellow.</p>
+    @Html.Raw(Model.Message.Replace("\r\n", "<br />"))
+</div>

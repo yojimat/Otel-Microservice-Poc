@@ -1,0 +1,9 @@
+﻿@page
+@using Microservice_1.Pages
+@model IndexModel
+
+<div class="text-center" style="background-color: cornflowerblue">
+    <h1 class="display-4">Microservice 1</h1>
+    <p>This is supposed to call microservice 2 and have a blue background. Verify message bellow.</p>
+    @Html.Raw(Model.Message.Replace("\r\n", "<br />"))
+</div>

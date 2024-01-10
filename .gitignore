@@ -1,0 +1,50 @@
+# Ignore .NET build output directories
+**/bin/*
+**/obj/*
+
+# Ignore NuGet packages
+*.nupkg
+packages/
+
+# Ignore user-specific files
+*.user
+*.suo
+*.sln.docstates
+
+# Ignore Visual Studio files
+.vs/
+*.vscode/
+
+# Ignore Resharper files
+_ReSharper*/
+*.resharper*
+*.DotSettings.user
+
+# Ignore build and publish files
+*.publish.xml
+*.pubxml
+*.pubxml.user
+*.pubxml.bak
+
+# Ignore logs and other generated files
+*.log
+*.bak
+*.cache
+*.tmp
+
+# Ignore test results
+**/TestResults/
+
+# Ignore .NET Core build and publish folders
+**/publish/*
+**/build/*
+
+# Ignore local development files
+**/launchSettings.Development.json
+**/appsettings.Development.json
+
+# Ignore Visual Studio Code files
+.vscode/
+
+# Ignore macOS specific files
+.DS_Store
