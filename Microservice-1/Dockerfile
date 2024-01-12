@@ -9,8 +9,6 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 
-COPY ["./Utils/", "Utils/"] 
-
 COPY ["./Microservice-1", "Microservice-1/"]
 RUN dotnet restore "./Microservice-1/Microservice-1.csproj"
 

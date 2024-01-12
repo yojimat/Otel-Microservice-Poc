@@ -1,21 +1,37 @@
+using System.Diagnostics;
 using System.Text;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using OpenTelemetry;
 
 namespace Otel_Microservices_Poc.Pages;
-public class IndexModel(ILogger<IndexModel> logger) : PageModel
+public class IndexModel(ILogger<IndexModel> logger, ActivitySource activitySource, HttpClient httpClient) : PageModel
 {
-    public string Message { get; private set; } = "Content didn't come.";
+    public string ResultFromRequest { get; private set; } = "Content didn't come.";
+    public string NumberGenerated { get; private set; } = "No number generated.";
 
     public async Task OnGet()
     {
         logger.LogInformation("Microservice-0: Index page visited");
 
-        var httpClient = new HttpClient();
         HttpResponseMessage result;
+
+        var randomNumberGenerator = new Random();
+        var randomNumber = randomNumberGenerator.Next(1, 7);
+
+        NumberGenerated = randomNumber.ToString();
 
         try
         {
-            result = await httpClient.GetAsync("http://host1:8080");
+            const string activityName = "microservice-0-sending-number";
+
+            using var activity = activitySource.StartActivity(activityName, ActivityKind.Producer);
+            activity?.AddTag("microservice-who-created-number", "0");
+
+            Baggage.SetBaggage("number-generated", randomNumber.ToString());
+
+            result = await httpClient.GetAsync("http://host1:8080"); 
+
+            if (!result.IsSuccessStatusCode) return;
         }
         catch (HttpRequestException e)
         {
@@ -23,13 +39,11 @@ public class IndexModel(ILogger<IndexModel> logger) : PageModel
             return;
         }
 
-        if (!result.IsSuccessStatusCode) return;
-
         var content = await result.Content.ReadAsByteArrayAsync();
         if (content.Length > 0)
         {
             var contentString = Encoding.UTF8.GetString(content);
-            Message = contentString;
+            ResultFromRequest = contentString;
         }
     }
 }

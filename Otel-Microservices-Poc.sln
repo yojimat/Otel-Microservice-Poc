@@ -4,23 +4,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Otel-Microservices-Poc", "Otel-Microservices-Poc\Otel-Microservices-Poc.csproj", "{F65D942A-CBB1-4FBC-8B41-27113BAC57DA}"
-	ProjectSection(ProjectDependencies) = postProject
-		{577B9E07-C9B4-45DC-A8A1-DEFD8522D3B6} = {577B9E07-C9B4-45DC-A8A1-DEFD8522D3B6}
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{978487DF-54B7-47BF-9738-A7470E46DB79}"
 	ProjectSection(SolutionItems) = preProject
 		docker-compose.yaml = docker-compose.yaml
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice-1", "Microservice-1\Microservice-1.csproj", "{5DC2DD97-F9BA-44FB-B655-92DBB7E8F79C}"
-	ProjectSection(ProjectDependencies) = postProject
-		{577B9E07-C9B4-45DC-A8A1-DEFD8522D3B6} = {577B9E07-C9B4-45DC-A8A1-DEFD8522D3B6}
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice-2", "Microservice-2\Microservice-2.csproj", "{6969A075-DA2E-40A9-8244-821DCB23B2B7}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utils", "Utils\Utils.csproj", "{577B9E07-C9B4-45DC-A8A1-DEFD8522D3B6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".docker", ".docker", "{9A609704-1924-4EA5-95DC-6FA686715388}"
 	ProjectSection(SolutionItems) = preProject
@@ -46,10 +39,6 @@ Global
 		{6969A075-DA2E-40A9-8244-821DCB23B2B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6969A075-DA2E-40A9-8244-821DCB23B2B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6969A075-DA2E-40A9-8244-821DCB23B2B7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{577B9E07-C9B4-45DC-A8A1-DEFD8522D3B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{577B9E07-C9B4-45DC-A8A1-DEFD8522D3B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{577B9E07-C9B4-45DC-A8A1-DEFD8522D3B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{577B9E07-C9B4-45DC-A8A1-DEFD8522D3B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
